@@ -1,0 +1,758 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(249, 242, 233);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+hr {
+  background-color: #00a6fb;
+  border: none;
+  height: 4px;
+  margin: 20px 50px;
+}
+
+/* Navigation */
+
+.navbar {
+  margin: 0;
+  padding: 20px 60px;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  border-bottom: 3px solid whitesmoke;
+  font-size: 2rem;
+}
+
+.logo-nav {
+  margin-right: auto;
+}
+
+.logo-nav img {
+  width: 50px;
+  height: 45px;
+  object-fit: contain;
+}
+
+a {
+  color: black;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: white;
+  transition: transform 0.5s ease;
+}
+
+.navbar a:not(.logo-nav) {
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid #00a6fb;
+}
+
+.navbar a:not(.logo-nav):hover {
+  background-color: #00a6fb;
+  color: white;
+  border: 2px solid white;
+  transform: scale(1.1);
+}
+
+/* text */
+h1 {
+  text-align: center;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 60%;
+  background-position: center top;
+}
+
+.hero img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-bottom: 4px solid black;
+}
+
+.hero h1 {
+  font-size: 13rem;
+  text-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  transform: translate(-50, -50);
+  color: whitesmoke;
+  -webkit-text-stroke: 3px black;
+}
+
+/* Hero rally */
+
+.hero-rally {
+  position: relative;
+  overflow: hidden;
+  height: 60%;
+  background-position: center top;
+}
+
+.hero-rally::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-rally img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center 10%;
+  border-bottom: 4px solid black;
+}
+
+.hero-rally h1 {
+  font-size: 13rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50, -50);
+  color: whitesmoke;
+  -webkit-text-stroke: 3px black;
+  z-index: 2;
+}
+
+/* Main content */
+.main .article {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main .article img {
+  width: 40%;
+  height: auto;
+  border: 4px solid black;
+  border-radius: 20px;
+}
+
+.main .article .tekst {
+  width: 60%;
+  font-size: 2rem;
+  padding: 4rem;
+  text-align: center;
+}
+
+.main .article .tekst h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 5rem;
+}
+
+/* stappenplan padel */
+.article-padel h2 {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 40px;
+}
+
+.article-padel h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.stappenplan h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.stappenplan p {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.stappenplan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  list-style-position: inside;
+  padding: 0;
+  align-items: stretch;
+  padding-bottom: 30px;
+  margin: 0 50px;
+}
+
+.stappenplan li {
+  background-color: #f5f5f5;
+  padding: 5px 20px 20px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #00a6fb;
+}
+
+.stappenplan li img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+/* Padel vormen */
+.rackets h2 {
+  text-align: center;
+  font-size: 5rem;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.racket-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.racket-list li {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 3px solid #00a6fb;
+  font-size: 1.5rem;
+  transition: font-size 0.5s ease-in-out;
+  text-align: center;
+  margin: auto 0;
+}
+
+.racket-list li:hover {
+  font-size: 1.6rem;
+}
+
+.rackets img {
+  width: 60%;
+  display: block;
+  margin: 0 auto 4rem;
+  height: auto;
+  object-fit: cover;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* Rally article */
+
+.main-rally .article-rally {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 30px;
+}
+
+.main-rally .article-rally .video-rally {
+  width: 900px;
+  height: 450px;
+}
+
+.main-rally .article-rally .tekst-rally {
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+.main-rally .article-rally .tekst-rally h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3.5rem;
+}
+
+.main-rally .article-rally .tekst-rally p {
+  text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 70px;
+  margin-top: 10rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 8rem;
+}
+
+.footer-column h3 {
+  font-size: 3rem;
+  padding-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-top: 2px solid whitesmoke;
+  padding: 10px 0;
+  font-size: 1.3rem;
+}
+
+/* Padel-spelers pagina */
+
+.spelers-lijn {
+  height: 0.3rem;
+  color: black;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+/* Section 1 */
+.padel-types {
+  width: 100%;
+  text-align: center;
+  padding: 0 3rem 5rem;
+}
+
+.padel-types h2 {
+  font-size: 7rem;
+  margin: 3rem auto 2rem;
+}
+
+.padel-types p {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.grid-padel-type {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.padel-type-card {
+  border: 3px solid #00a6fb;
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.padel-type-card h3 {
+  font-size: 3rem;
+}
+
+.padel-type-card ul {
+  width: fit-content;
+  margin: 1.5rem auto 1rem;
+  text-align: left;
+  list-style-position: outside;
+  font-weight: bold;
+}
+
+.padel-type-card ul li {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.sterktes {
+  list-style-type: square;
+}
+
+.padel-type-card h4 {
+  font-size: 2.5rem;
+}
+
+/* section 2 */
+.padel-spelers h2 {
+  font-size: 6rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.padel-speler-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin: 2rem 3rem;
+}
+
+.padel-speler-card {
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 2rem 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 780px;
+  background-color: lightgray;
+}
+
+.padel-speler-card h3 {
+  font-size: 4rem;
+  color: #00a6fb;
+  text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem;
+}
+
+.padel-speler-card img {
+  object-fit: cover;
+  width: 70%;
+  height: 40%;
+  border: 3px solid black;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.padel-speler-card p {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.padel-speler-card ul {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  list-style-position: outside;
+  font-weight: bold;
+}
+
+.punten h4 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.punten ul li {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Contact pagina */
+.main-contact {
+  margin-top: 120px;
+  width: 100%;
+}
+
+.main-contact h1 {
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.main-contact .contact {
+  margin: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.contact-card {
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.contact-card.left {
+  background-color: #00a6fb;
+  margin-left: -2rem;
+  transform: translateY(1.3);
+  padding: 3rem 6rem;
+}
+
+.contact-card.left h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.contact-card.left p {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card.left a {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.6rem;
+}
+
+.locaties-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.locaties-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  align-items: center;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+
+.contact-card.left .locaties-card p {
+  margin-bottom: 1rem;
+}
+
+.padel-locaties h3 {
+  font-size: 3rem;
+  margin: 2rem auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10rem 5rem 0;
+}
+
+.contact-form label {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form input,
+textarea {
+  border: 2px solid black;
+  width: 80%;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  width: 50%;
+  height: 8rem;
+}
+
+.submit-btn {
+  width: 30%;
+  margin: 2rem auto;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 30px;
+  padding: 2rem 0.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  /* Hoofdpagina padel */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px auto;
+    gap: 2rem;
+    position: static;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px black;
+    top: 14%;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .article {
+    flex-direction: column;
+  }
+
+  .main .article .tekst {
+    width: 100%;
+    padding: 0;
+  }
+
+  .main .article img {
+    width: 90%;
+  }
+
+  .stappenplan {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .racket-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 90%;
+  }
+
+  .rackets img {
+    width: 90%;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    padding: 0;
+    gap: 60px;
+  }
+
+  /* Padel Rally */
+
+  .hero-rally h1 {
+    font-size: 5rem;
+  }
+
+  .main-rally .article-rally {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-rally .article-rally .video-rally {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 3rem;
+  }
+
+  .main-rally .article-rally .tekst-rally {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .main-rally .article-rally .tekst-rally h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 4rem;
+  }
+
+  .main-rally .article-rally .tekst-rally p {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+  }
+
+  /* Spelers pagina */
+  .padel-types h2 {
+    font-size: 5rem;
+  }
+
+  .padel-types p {
+    font-size: 1.5rem;
+  }
+
+  .grid-padel-type {
+    grid-template-columns: 1fr;
+  }
+
+  .padel-speler-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .padel-speler-card {
+    min-height: 700px;
+    overflow: hidden;
+  }
+
+  .padel-speler-card img {
+    height: 200px;
+  }
+
+  .punten ul {
+    margin-bottom: 2rem;
+  }
+
+  /* CONTACT PAGINA */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card.left {
+    margin-left: 0;
+    padding: 0 4rem;
+  }
+
+  .contact-form {
+    padding: 2rem 2rem 0;
+  }
+
+  .contact-form input {
+    width: 70%;
+  }
+  .contact-form textarea {
+    width: 90%;
+  }
+
+  .submit-btn {
+    width: 50%;
+  }
+}
