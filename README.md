@@ -9,7 +9,7 @@ Ik heb deze website gebouwd om te oefenen met:
 - Layout met Flexbox en Grid
 
 ## Live website
-https://mikashopifypro.github.io/padel-website/
+https://mikadevelopnl.github.io/padel-website/
 
 ## Wat ik heb geleerd
 - HTML structuur opbouwen
